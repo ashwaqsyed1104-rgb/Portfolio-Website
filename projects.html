@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwaq's Portfolio</title>
+  <link rel="stylesheet" href="projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SYED ASHWAQ</div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="About.html"  >About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="skills.html">Skills</a>
+        <a href="#">Projects</a>
+        <a href="interns.html">Experience / Internships</a>
+        <a href="certs.html">Certificates</a>
+        <a href="edu.html">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+  </header>
+
+  <main class="hero">
+    <h1>
+      
+      <span class="portfolio">PROJECTS</span>
+    </h1>
+    <div class="scroll-wrapper">
+      <img src="image.png" alt="Click Icon" class="click-icon" />
+      <div class="scroll-btn-container">
+        <button class="scroll-btn" onclick="scrollToBottom()">View projects</button>
+      </div>
+    </div>
+    </div>
+
+
+    <section class="projects-section" id="proj">
+
+    <div class="projects-container">
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h2 class="project-title">Portfolio Website</h2>
+      <p class="project-description">You're looking at it. Custom-coded, sleek personal portfolio using vanilla HTML, CSS, and custom fonts. Clean. No BS.</p>
+      <div class="project-details">
+        <span class="project-status completed">Status: Completed</span>
+        
+      <a href="https://github.com/ashwaqsyed1104-rgb/Portfolio-Website" target="_blank" class="project-link">View Code</a>
+      </div>
+
+    </div>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h2 class="project-title">Digital healthcare ecosystem </h2>
+      <p class="project-description">A digital healthcare platform that allows users to view services, register accounts, and explore doctor appointments, pharmacy options, and insurance information. The interface is designed using HTML, CSS, and basic JavaScript with a focus on responsive layout, clean UI, and smooth user navigation.</p>
+      <div class="project-details">
+        <span class="project-status ongoing">Status: Ongoing</span>
+      <a href="#" target="_blank" class="project-link">Coming Soon</a>
+      </div>
+    </div>
+
+    
+
+    <!-- Project 3 
+    <div class="project-card">
+      <h2 class="project-title">Shop Order Site</h2>
+      <p class="project-description">A web app to allow customers to order items from my father's shop. Designed for desktop and optimized for mobile soon.</p>
+      <div class="project-details">
+        <span class="project-status development">Status: In Development</span>
+      <a href="https://github.com/yourusername/gamedrop" target="_blank" class="project-link">Coming Soon</a>
+      </div>
+    </div>-->
+
+    <!-- Project 3 
+    <div class="project-card">
+      <h2 class="project-title">Tic Tac Toe</h2>
+      <p class="project-description">A classic Tic Tac Toe game built with HTML, CSS, and JavaScript. Simple UI, smooth game logic, and fun to play. Designed for desktop; mobile optimization coming soon.</p>
+      <div class="project-details">
+        <span class="project-status ongoing">Status: Ongoing</span>
+      <a href="#" target="_blank" class="project-link">Coming Soon</a>
+      </div>
+    </div>-->
+    
+
+  </div>
+</section>
+<button id="scrollTopBtn" class="scroll-top-btn">
+  <svg viewBox="0 0 24 24">
+    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+  </svg>
+</button>
+
+  </main>
+
+  <footer class="footer">© 2026 SYED ASHWAQ. All rights reserved.</footer>
+  <script>
+  function scrollToBottom() {
+  document.getElementById("proj").scrollIntoView({ behavior: 'smooth' });
+}
+
+
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollBtn() {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+}
+
+window.addEventListener("load", toggleScrollBtn);
+window.addEventListener("scroll", toggleScrollBtn);
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const cards = document.querySelectorAll('.project-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--x', `${x}px`);
+      card.style.setProperty('--y', `${y}px`);
+    });
+  });
+
+
+</script>
+
+
+</body>
+</html>

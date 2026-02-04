@@ -1,0 +1,217 @@
+html,
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-family: "poppins", sans-serif;
+}
+
+.logo {
+  color: #dee2ff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  position: relative;
+  padding-top: 40px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: #ccc;
+  font-size: 14px;
+  font-family: "poppins", sans-serif;
+}
+@font-face {
+  font-family: "poppins";
+  src: url("Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Edges";
+  src: url("Edges.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Brunson";
+  src: url("Brunson.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HeadingNow";
+  src: url("HeadingNowTrial-37Extrabold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("fonnts.com-Anzeigen_Grotesk.otf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "tommy";
+  src: url("MADE TOMMY Regular_PERSONAL USE.otf") format("opentype");
+}
+
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 60px 80px;
+}
+
+.skill-card {
+  background: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  pointer-events: none;
+  border: 6px solid #bcb8b1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  mask-image: radial-gradient(
+    circle 100px at var(--x, 50%) var(--y, 50%),
+    black 0%,
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 225px at var(--x, 50%) var(--y, 50%),
+    black 0%,
+    transparent 70%
+  );
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+.skill-card h2 {
+  font-family: "poppins", sans-serif;
+  color: #a3cef1;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: "tommy", sans-serif;
+}
+
+.skill-card ul li::before {
+  content: "⚡";
+  margin-right: 8px;
+  color: #f9a825;
+}
+
+.shrink-heading {
+  font-family: "Anton", sans-serif;
+  font-size: 270px;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: 3.5px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 5;
+  animation: fadeShrinkStick 0.4s ease-out forwards;
+}
+
+.shrink-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background-color: #b0bec5;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform-origin: center;
+}
+
+.shrink-heading.animate-line::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1);
+}
+
+.shrink-heading {
+  font-family: "Anton", sans-serif;
+  font-size: 270px;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: 3.5px;
+  text-align: center;
+  margin: 0;
+  animation: shrinkAndStick 2.2s ease forwards;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes shrinkAndStick {
+  0% {
+    font-size: 270px;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+    font-size: 150px;
+    transform: translateY(0);
+  }
+
+  100% {
+    font-size: 40px;
+    transform: translateY(0);
+    position: sticky;
+    top: 0;
+    background: black;
+    padding: 20px 0;
+  }
+}

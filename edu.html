@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwaq's Portfolio</title>
+  <link rel="stylesheet" href="edu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SYED ASHWAQ</div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="About.html"  >About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="interns.html">Experience / Internships</a>
+        <a href="certs.html">Certificates</a>
+        <a href="#">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+  </header>
+
+  <main class="hero">
+    <h1>
+      
+      <span class="portfolio">EDUCATION</span>
+    </h1>
+    <div class="scroll-wrapper">
+      <img src="image.png" alt="Click Icon" class="click-icon" />
+      <div class="scroll-btn-container">
+        <button class="scroll-btn" onclick="scrollToBottom()">My Education</button>
+      </div>
+    </div>
+    </div>
+
+
+    <section class="education-section" id="education">
+  <div class="education-container">
+
+    <div class="edu-block">
+      <h2 class="edu-degree">B.Tech in Computer Science Engineering</h2>
+      <p class="edu-institute">SRM University <span class="edu-duration">| 2025 – 2029</span></p>
+      <p class="edu-description">Focusing on Web Dev, DSA, DBMS & Systems. Built hands-on projects and engaged in real-world problem solving.</p>
+    </div>
+    <div class="connector">↑</div>
+    <div class="edu-block">
+      <h2 class="edu-degree">Intermediate (MPC)</h2>
+      <p class="edu-institute">KVR Junior College <span class="edu-duration">| 2023 – 2025</span></p>
+      <p class="edu-description">Studied Mathematics, Physics, and Chemistry intensively. Laid strong foundations in logic & reasoning.</p>
+    </div>
+    <div class="connector">↑</div>
+    <div class="edu-block">
+      <h2 class="edu-degree">High School (SSC)</h2>
+      <p class="edu-institute">Math Man High School <span class="edu-duration">| 2022 – 2023</span></p>
+      <p class="edu-description">Built foundational knowledge in science and computer basics. Participated in quizzes and competitions.</p>
+    </div>
+
+  </div>
+</section>
+
+<button id="scrollTopBtn" class="scroll-top-btn">
+  <svg viewBox="0 0 24 24">
+    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+  </svg>
+</button>
+
+  </main>
+
+  <footer class="footer">© 2026 SYED ASHWAQ . All rights reserved.</footer>
+  <script>
+  function scrollToBottom() {
+  document.getElementById("education").scrollIntoView({ behavior: 'smooth' });
+}
+
+
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollBtn() {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+}
+
+window.addEventListener("load", toggleScrollBtn);
+window.addEventListener("scroll", toggleScrollBtn);
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+</script>
+
+
+</body>
+</html>

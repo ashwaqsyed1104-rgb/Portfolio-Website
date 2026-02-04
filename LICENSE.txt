@@ -1,0 +1,18 @@
+Copyright (c) 2025 Sai Siddhardha Netha  
+All Rights Reserved.
+
+This repository and all files within it (including but not limited to HTML, CSS, JavaScript, images, fonts, and other assets) are the intellectual property of Sai Siddhardha Netha.  
+
+No part of this codebase may be copied, reproduced, distributed, modified, published, uploaded, posted, publicly displayed, encoded, translated, or used in any form or by any means, in whole or in part, without the express written permission of the copyright holder.
+
+This project is intended for personal use, demonstration, and portfolio purposes only. Unauthorized use, reproduction, or distribution of any content in this repository is strictly prohibited and constitutes a violation of international copyright laws.
+
+The source code and associated content are **not open-source** and are **not licensed for public or commercial use**.  
+
+If you are interested in using this work (in part or full), please contact the author directly for licensing or usage requests:
+
+📧 **saisiddhardhanetha@gmail.com**
+
+Legal action may be taken against any party found to be in violation of these terms.
+
+Thank you for respecting the creator's rights.

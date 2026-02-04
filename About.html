@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashwaq's Portfolio</title>
+    <link rel="stylesheet" href="About.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">SYED ASHWAQ  </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="interns.html">Experience / Internships</a>
+        <a href="certs.html">Certificates</a>
+        <a href="edu.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <h1>
+        <span class="portfolio">ABOUT</span>
+      </h1>
+      <div class="hero-subtext">
+        <span
+          ><a href="https://www.linkedin.com/in/syed-ashwaq-b009601b0/"
+            >LinkedIn</a
+          ></span
+        >
+        <span><a href="https://github.com/ashwaqsyed1104-rgb">Github</a></span>
+        <span><a href="mailto:ashwaqsyed1104@email.com">Email</a></span>
+        <!--<span
+          ><a href="https://www.instagram.com/siddhardha_sai/"
+            >Instagram</a
+          ></span
+        >-->
+      </div>
+
+      <section class="about-description" id="about-description">
+        <div class="scroll-wrapper">
+          <img src="image.png" alt="Click Icon" class="click-icon" />
+          <div class="scroll-btn-container">
+            <button class="scroll-btn" onclick="scrollToBottom()">
+              Who am I?
+            </button>
+          </div>
+        </div>
+
+        <p>
+               I’m Ashwaq Syed, a student pursuing CSE (Artificial Intelligence & Machine Learning) with a strong interest in technology and practical learning. I enjoy exploring concepts beyond the classroom and understanding how real-world applications are built.
+
+               Currently, I am working on strengthening my basics in HTML, CSS, basic JavaScript, and C programming, and learning step by step to improve my problem-solving and development skills. Even as a beginner, I stay consistent with practice and focus on building a strong foundation.
+
+                My long-term goal is not just to get a job, but to use my AI/ML and development knowledge to create useful products, build innovative projects, and solve real-world problems through technology. I am interested in experimenting with ideas, working on practical applications, and eventually contributing to meaningful tech-based solutions or building something of my own.
+     
+               At present, I am learning web development fundamentals and experimenting with small projects that help me understand both technical logic and user experience.
+     
+               I believe learning through hands-on experience, staying curious, and improving every day are the keys to growth.
+        </p>
+      </section>
+      <button id="scrollTopBtn" class="scroll-top-btn">
+        <svg viewBox="0 0 24 24">
+          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+        </svg>
+      </button>
+    </main>
+
+    <footer class="footer">
+      © 2026 Syed Ashwaq. All rights reserved.
+    </footer>
+
+    <script>
+      function scrollToBottom() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+      function scrollToUp() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      function toggleScrollBtn() {
+        if (window.scrollY > 400) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      }
+
+      window.addEventListener("load", toggleScrollBtn);
+      window.addEventListener("scroll", toggleScrollBtn);
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

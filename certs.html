@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwaq's Portfolio</title>
+  <link rel="stylesheet" href="certs.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SYED ASHWAQ</div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="About.html"  >About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="interns.html">Experience / Internships</a>
+        <a href="#">Certificates</a>
+        <a href="edu.html">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+  </header>
+
+  <main class="hero">
+      <h1>
+        <span class="portfolio">CERTIFICATES</span>
+      </h1>
+      <section class="about-description" id="about-description">
+        <div class="scroll-wrapper">
+          <img src="image.png" alt="Click Icon" class="click-icon" />
+          <div class="scroll-btn-container">
+            <button class="scroll-btn" onclick="scrollToBottom()">
+              My Certificates
+            </button>
+          </div>
+        </div>
+        <p>
+          "Still waiting for an internship like it’s a Zomato order stuck on
+          ‘Assigning delivery partner’."
+        </p>
+        <button class="scroll-btn-1" onclick="scrollToUp()">OK</button>
+      </section>
+    </main>
+  <footer class="footer">© 2026 SYED ASHWAQ. All rights reserved.</footer>
+  <script>
+  function scrollToBottom() {
+  document.getElementById("certs").scrollIntoView({ behavior: 'smooth' });
+}
+
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollBtn() {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+}
+
+window.addEventListener("load", toggleScrollBtn);
+window.addEventListener("scroll", toggleScrollBtn);
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+
+  const cards = document.querySelectorAll('.project-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--x', `${x}px`);
+      card.style.setProperty('--y', `${y}px`);
+    });
+  });
+
+</script>
+
+
+</body>
+</html>

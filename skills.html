@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwaq's Portfolio</title>
+  <link rel="stylesheet" href="skills.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ASHWAQ SYED</div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="About.html"  >About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="#">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="interns.html">Experience / Internships</a>
+        <a href="certs.html">Certificates</a>
+        <a href="edu.html">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+  </header>
+  <section id="skills">
+  <main class="hero">
+    <h1 class="portfolio shrink-heading">SKILLS</h1>
+
+    
+  <section class="skills-section">
+      <div class="skill-card">
+        <h2>Frontend</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript </li>
+          
+        </ul>
+      </div>
+
+      <!--<div class="skill-card">
+        <h2>UI/UX & Design</h2>
+        <ul>
+          <li>Figma</li>
+          <li>Framer</li>
+          
+        </ul>z
+      </div>-->
+
+      <div class="skill-card">
+        <h2>Programming Languages</h2>
+        <ul>
+          <li>C</li>
+          <li>c++</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h2>Tools & Platforms</h2>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h2>Soft Skills</h2>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+          <li>Time Management</li>
+          <li>Adaptability</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h2>Digital Creation Skills</h2>
+        <ul>
+          <li>Photo Editing</li>
+          <li>Video Editing</li>
+          
+          <li>Web Design</li>
+          <li>CAD Drawing</li>
+        </ul>
+      </div>
+
+      <!--<div class="skill-card">
+        <h2>Creative & Artistic Skills</h2>
+        <ul>
+          <li>Drawing</li>
+          <li>Painting</li>
+        </ul>
+      </div>-->
+</section>
+</section>
+
+  </main>
+
+  <footer class="footer">© 2026 Syed Ashwaq. All rights reserved.</footer> 
+  <script>
+  window.addEventListener('load', () => {
+    const heading = document.querySelector('.shrink-heading');
+    setTimeout(() => {
+      heading.classList.add('animate-line');
+    }, 2400); // Matches animation duration
+  });
+
+
+  const cards = document.querySelectorAll('.skill-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--x', `${x}px`);
+      card.style.setProperty('--y', `${y}px`);
+    });
+  });
+
+
+  
+
+  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+
+  font-family: "poppins", sans-serif;
+}
+
+.logo {
+  color: #dee2ff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  position: relative;
+  padding-top: 40px;
+}
+
+.portfolio {
+  font-family: "Anton", sans-serif;
+
+  font-size: 270px;
+  line-height: 1.8;
+  letter-spacing: 2.5px;
+  color: white;
+}
+
+.hero-image {
+  max-width: 430px;
+  position: absolute;
+  left: 50%;
+  top: 55px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.hero-subtext {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 245px;
+  font-size: 16px;
+  color: #ccc;
+  font-family: "Poppins", sans-serif;
+
+  margin-top: -130px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: #b0bec5;
+  font-size: 14px;
+  font-family: "poppins", sans-serif;
+  position: relative;
+  bottom: -140px;
+}
+@font-face {
+  font-family: "poppins";
+  src: url("Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Edges";
+  src: url("Edges.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Brunson";
+  src: url("Brunson.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HeadingNow";
+  src: url("HeadingNowTrial-37Extrabold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("fonnts.com-Anzeigen_Grotesk.otf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "tommy";
+  src: url("MADE TOMMY Regular_PERSONAL USE.otf") format("opentype");
+}
+@keyframes stretchText {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    letter-spacing: 2.5px;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1);
+    letter-spacing: 5.5px;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    letter-spacing: 2.5px;
+  }
+}
+.portfolio {
+  animation: stretchText 1.2s ease-out forwards;
+}
+@keyframes Subtext_text {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    padding: 10px 245px;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.035);
+    padding: 10px 246px;
+  }
+  100% {
+    transform: scale(1);
+    padding: 10px 245px;
+  }
+}
+.hero-subtext {
+  animation: Subtext_text 1.15s ease-out forwards;
+}

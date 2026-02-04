@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashwaq's Portfolio</title>
+    <link rel="stylesheet" href="interns.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">SYED ASHWAQ  </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="resume.html">Resume / CV</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="#">Experience / Internships</a>
+        <a href="certs.html">Certificates</a>
+        <a href="edu.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <h1>
+        <span class="portfolio">INTERNSHIPS</span>
+      </h1>
+      <section class="about-description" id="about-description">
+        <div class="scroll-wrapper">
+          <img src="image.png" alt="Click Icon" class="click-icon" />
+          <div class="scroll-btn-container">
+            <button class="scroll-btn" onclick="scrollToBottom()">
+              My Experience
+            </button>
+          </div>
+        </div>
+        <p>
+          "Still waiting for an internship like it’s a Zomato order stuck on
+          ‘Assigning delivery partner’."
+        </p>
+        <button class="scroll-btn-1" onclick="scrollToUp()">OK</button>
+      </section>
+    </main>
+    <button id="scrollTopBtn" class="scroll-top-btn">
+      <svg viewBox="0 0 24 24">
+        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+      </svg>
+    </button>
+    <footer class="footer">
+      © 2026 Syed Ashwaq. All rights reserved.
+    </footer>
+
+    <script>
+      function scrollToBottom() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+      function scrollToUp() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      function toggleScrollBtn() {
+        if (window.scrollY > 250) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      }
+
+      window.addEventListener("load", toggleScrollBtn);
+      window.addEventListener("scroll", toggleScrollBtn);
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
