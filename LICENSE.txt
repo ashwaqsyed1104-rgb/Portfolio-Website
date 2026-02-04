@@ -1,7 +1,7 @@
-Copyright (c) 2025 Sai Siddhardha Netha  
+Copyright (c) 2026 SYED ASHWAQ 
 All Rights Reserved.
 
-This repository and all files within it (including but not limited to HTML, CSS, JavaScript, images, fonts, and other assets) are the intellectual property of Sai Siddhardha Netha.  
+This repository and all files within it (including but not limited to HTML, CSS, JavaScript, images, fonts, and other assets) are the intellectual property of SYED ASHWAQ .  
 
 No part of this codebase may be copied, reproduced, distributed, modified, published, uploaded, posted, publicly displayed, encoded, translated, or used in any form or by any means, in whole or in part, without the express written permission of the copyright holder.
 
@@ -11,7 +11,7 @@ The source code and associated content are **not open-source** and are **not lic
 
 If you are interested in using this work (in part or full), please contact the author directly for licensing or usage requests:
 
-📧 **saisiddhardhanetha@gmail.com**
+📧 **ashwaqsyed1104@gmail.com**
 
 Legal action may be taken against any party found to be in violation of these terms.
 
